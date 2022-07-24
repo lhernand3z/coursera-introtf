@@ -12,6 +12,8 @@ def house_model():
 
     # Scaling down ys, for some reason they say it's better for the modeling
     # maybe number crunching is easier ?
+    # response: This is called normalization, if you're training a neural network especially
+    # in image processing, it will usually learn better if you scale all values to between 0 and 1
     ys = ys / 100
     print('DEBUG: Just want to see the array', ys)
 
