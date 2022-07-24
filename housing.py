@@ -7,8 +7,10 @@ def house_model():
 
     # Define input tensors manually for houses with 1 up to 6 bedrooms
     # Hint: Remember to explicitly set the dtype as float
-    xs = np.array([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
-    ys = np.array([50, 100, 150, 200, 250, 300, 350])
+    xs = np.array([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
+
+    xs = np.array([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0], dtype=float)
+    ys = np.array([50, 100, 150, 200, 250, 300, 350], dtype=float)
 
     # Scaling down ys, for some reason they say it's better for the modeling
     # maybe number crunching is easier ?
