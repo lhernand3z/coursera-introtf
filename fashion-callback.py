@@ -21,6 +21,13 @@ print(tf.__version__)
 
 class myCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs={}):
+        '''
+        Halts the training after reaching 60 percent accuracy
+
+        Args:
+          epoch (integer) - index of epoch (required but unused in the function definition below)
+          logs (dict) - metric results from the training epoch
+        '''
         if(logs.get('accuracy') >= 0.88):
             print("\nReached 88% accuracy so cancelling training!")
             self.model.stop_training = True
