@@ -32,6 +32,7 @@ class myCallback(tf.keras.callbacks.Callback):
             print("\nReached 88% accuracy so cancelling training!")
             self.model.stop_training = True
 
+#Instantiate the class
 callbacks = myCallback()
 
 #Load the Fashion MNIST dataset
@@ -50,7 +51,7 @@ test_images = test_images / 255.0
 #     unfeasible, so we flatten it to 28x28=784x1
 # Dense: Adds a layer of neurons,
 #  Rule of Thumb: the last layer should match the number of classes you're classifying
-# activation, each layer of neurons needs an activation function to tell them what to do:
+# activation, each layer of neurons needs an activation function to tell them what to do
 #   ReLU, it only passes values 0 or greater to the next layer
 #   Softmax, takes a list of values and scales these so the sum of all elements will be equal to 1
 model = tf.keras.models.Sequential([tf.keras.layers.Flatten(),
