@@ -53,7 +53,7 @@ test_images = test_images / 255.0
 # Dense: Adds a layer of neurons,
 #  Rule of Thumb: the last layer should match the number of classes you're classifying
 # activation, each layer of neurons needs an activation function to tell them what to do:
-#   ReLU, it only passes values 0 or greater to the next layer
+#   ReLU, it only passes values 0 or greater to the next layer (Rectified Linear Unit)
 #   Softmax, takes a list of values and scales these so the sum of all elements will be equal to 1
 model = tf.keras.models.Sequential([tf.keras.layers.Flatten(),
                                     tf.keras.layers.Dense(128, activation=tf.nn.relu),
