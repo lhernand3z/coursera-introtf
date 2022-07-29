@@ -35,7 +35,7 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 
 # Train the model
 print(f'\nMODEL TRAINING:')
-model.fit(training_images, training_labels, epochs=5
+model.fit(training_images, training_labels, epochs=5)
 
 # Evaluate on the test set
 print(f'\nMODEL EVALUATION:')
@@ -52,7 +52,7 @@ THIRD_IMAGE = 28
 CONVOLUTION_NUMBER = 1
 
 layer_outputs = [layer.output for layer in model.layers]
-activation_model = tf.keras.models.Model(inputs = model.input, outputs = layers_outputs)
+activation_model = tf.keras.models.Model(inputs = model.input, outputs = layer_outputs)
 
 for x in range(0, 4):
     f1 = activation_model.predict(test_images[FIRST_IMAGE].reshape(1, 28, 28, 1))[x]
@@ -67,4 +67,4 @@ for x in range(0, 4):
     axarr[2, x].imshow(f3[0, :, :, CONVOLUTION_NUMBER], cmap='inferno')
     axarr[2, x].grid(False)
 
-# plt.show()
+plt.show()
